@@ -1,11 +1,11 @@
-import os
 import subprocess
-import time
-import zipfile
-import requests
-from pymongo import MongoClient
 
+# Step 0: Install required Python packages
 subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+
+import os
+import time
+from pymongo import MongoClient
 
 # Function to download MongoDB
 def download_mongodb():
