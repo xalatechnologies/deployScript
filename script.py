@@ -1,5 +1,5 @@
-import subprocess
 import os
+import subprocess
 import time
 import zipfile
 import requests
@@ -48,8 +48,13 @@ def start_mongodb():
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL
             )
-            time.sleep(10)  # Wait for MongoDB to start
-            print("MongoDB started successfully.")
+            print("Waiting for MongoDB to start...")
+            for i in range(10):
+                time.sleep(3)
+                if is_mongodb_running():
+                    print("MongoDB started successfully.")
+                    return
+            raise Exception("MongoDB did not start in time.")
         else:
             print("MongoDB is already running.")
     except Exception as e:
