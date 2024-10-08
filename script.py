@@ -5,6 +5,8 @@ import zipfile
 import requests
 from pymongo import MongoClient
 
+subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+
 # Function to download MongoDB
 def download_mongodb():
     url = "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.0.zip"
