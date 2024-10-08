@@ -1,14 +1,24 @@
 import subprocess
-
-# Step 0: Install required Python packages
-subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
-
 import os
 import time
+import zipfile
+import requests
 from pymongo import MongoClient
 
-# Function to download MongoDB
+# Function to check if MongoDB is running
+def is_mongodb_running():
+    try:
+        client = MongoClient('mongodb://localhost:27017', serverSelectionTimeoutMS=5000)
+        client.server_info()  # Attempt to connect to MongoDB
+        print("MongoDB is already running.")
+        return True
+    except:
+        print("MongoDB is not running.")
+        return False
+
+# Function to download MongoDB if not available
 def download_mongodb():
+    print("Downloading MongoDB...")
     url = "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.0.zip"
     output_path = "mongodb.zip"
     
@@ -27,16 +37,21 @@ def download_mongodb():
     os.makedirs("C:\\data\\db", exist_ok=True)
     print("MongoDB downloaded and extracted successfully.")
 
-# Function to start MongoDB
+# Function to start MongoDB if not running
 def start_mongodb():
     try:
-        subprocess.Popen(
-            ["C:\\MongoDB\\mongodb-windows-x86_64-6.0.0\\bin\\mongod.exe", "--dbpath", "C:\\data\\db"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
-        )
-        time.sleep(10)  # Wait for MongoDB to start
-        print("MongoDB started successfully.")
+        # Check if MongoDB is already running
+        result = subprocess.run(["tasklist"], capture_output=True, text=True)
+        if "mongod.exe" not in result.stdout:
+            subprocess.Popen(
+                ["C:\\MongoDB\\mongodb-windows-x86_64-6.0.0\\bin\\mongod.exe", "--dbpath", "C:\\data\\db"],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
+            time.sleep(10)  # Wait for MongoDB to start
+            print("MongoDB started successfully.")
+        else:
+            print("MongoDB is already running.")
     except Exception as e:
         print(f"Failed to start MongoDB: {e}")
 
@@ -54,36 +69,38 @@ def initialize_mongodb():
 
 # Main script flow
 
-# Step 1: Download and start MongoDB
-download_mongodb()
-start_mongodb()
+# Step 1: Check if MongoDB is running, if not, download and start MongoDB
+if not is_mongodb_running():
+    if not os.path.exists("C:\\MongoDB\\mongodb-windows-x86_64-6.0.0\\bin\\mongod.exe"):
+        download_mongodb()
+    start_mongodb()
 
 # Step 2: Initialize MongoDB
 initialize_mongodb()
 
-# Restore dependencies
+# Step 3: Restore dependencies
 subprocess.run(["dotnet", "restore"], check=True)
 
-# Build solution
+# Step 4: Build solution
 subprocess.run(["dotnet", "build", "--configuration", "Release", "--no-restore"], check=True)
 
-# Run tests
+# Step 5: Run tests
 subprocess.run(["dotnet", "test", "--configuration", "Release", "--no-build", "--logger", "trx"], check=True)
 
-# Save Test Results
+# Step 6: Save Test Results
 os.makedirs('TestResults', exist_ok=True)
 subprocess.run(["cp", "-r", "**/TestResults/*.trx", "TestResults/"], shell=True, check=True)
 
-# Generate Swagger Doc
+# Step 7: Generate Swagger Doc
 process = subprocess.Popen(["dotnet", "run", "--project", "DotnetMongoApi/DotnetMongoApi.csproj"])
-subprocess.run(["sleep", "20"], shell=True)
+time.sleep(20)
 subprocess.run(["Invoke-RestMethod", "http://localhost:5000/swagger/v1/swagger.json", "-OutFile", "swagger.json"], shell=True, check=True)
 
-# Modify Swagger Doc with Python Script
+# Step 8: Modify Swagger Doc with Python Script
 subprocess.run(["python", "modify_swagger.py"], check=True)
 
-# Package Application
+# Step 9: Package Application
 subprocess.run(["dotnet", "publish", "-c", "Release", "-o", "package"], check=True)
 
-# Publish Application to GitHub Packages
+# Step 10: Publish Application to GitHub Packages
 subprocess.run(["python", "publish_to_github_packages.py"], check=True)

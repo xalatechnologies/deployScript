@@ -21,5 +21,8 @@ jobs:
       with:
         dotnet-version: '8.x'
 
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt
+
     - name: Run Build, Test, and Package via Python Script
       run: python script.py
