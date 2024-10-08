@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29D12C3D-41B7-498B-847C-700A6BE45631}|..\\DotnetMongoApi.Tests\\DotnetMongoApi.Tests.csproj|c:\\users\\xalat\\documents\\github\\dotnetmongoapi\\dotnetmongoapi.tests\\testcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|c:\\users\\xalat\\documents\\github\\dotnetmongoapi\\dotnetmongoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|c:\\users\\xalat\\documents\\github\\dotnetmongoapi\\dotnetmongoapi\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|c:\\users\\xalat\\documents\\github\\dotnetmongoapi\\dotnetmongoapi\\context\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|solutionrelative:context\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|c:\\users\\xalat\\documents\\github\\dotnetmongoapi\\dotnetmongoapi\\dotnetmongoapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|solutionrelative:dotnetmongoapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|c:\\users\\xalat\\documents\\github\\dotnetmongoapi\\dotnetmongoapi\\models\\testmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05E47035-DF85-4243-A176-E1C33071C15A}|DotnetMongoApi.csproj|solutionrelative:models\\testmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi.Tests\\TestControllerTests.cs",
+              "RelativeDocumentMoniker": "..\\DotnetMongoApi.Tests\\TestControllerTests.cs",
+              "ToolTip": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi.Tests\\TestControllerTests.cs",
+              "RelativeToolTip": "..\\DotnetMongoApi.Tests\\TestControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T11:58:43.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T11:57:22.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TestController.cs",
+              "ToolTip": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Controllers\\TestController.cs",
+              "RelativeToolTip": "Controllers\\TestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T11:56:56.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Context\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Context\\MongoDbContext.cs",
+              "RelativeToolTip": "Context\\MongoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T11:54:10.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DotnetMongoApi",
+              "DocumentMoniker": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\DotnetMongoApi.csproj",
+              "RelativeDocumentMoniker": "DotnetMongoApi.csproj",
+              "ToolTip": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\DotnetMongoApi.csproj",
+              "RelativeToolTip": "DotnetMongoApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-08T11:53:48.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestModel.cs",
+              "DocumentMoniker": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Models\\TestModel.cs",
+              "RelativeDocumentMoniker": "Models\\TestModel.cs",
+              "ToolTip": "C:\\Users\\xalat\\Documents\\GitHub\\DotnetMongoApi\\DotnetMongoApi\\Models\\TestModel.cs",
+              "RelativeToolTip": "Models\\TestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T11:53:19.47Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

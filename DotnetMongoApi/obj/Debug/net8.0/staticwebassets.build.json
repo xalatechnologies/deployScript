@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GN4cgoKPV++3lGAg3S7iAVtULX+L26rUjEPzMh4Ply4=",
+  "Source": "DotnetMongoApi",
+  "BasePath": "_content/DotnetMongoApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
